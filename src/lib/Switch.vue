@@ -16,7 +16,7 @@ const hToggle = () => {
 </script>
 
 <template>
-  <button @click="hToggle" :disabled="disabled" :class="{ 'lz-disabled': props.disabled }">
+  <button class="lz-switch" @click="hToggle" :disabled="disabled" :class="{ 'lz-disabled': props.disabled }">
     <span :class="{ 'lz-checked': props.checked }"></span>
   </button>
 </template>
@@ -24,7 +24,7 @@ const hToggle = () => {
 <style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
-button {
+.lz-switch {
   height: $h;
   width: $h * 2;
   border: none;
