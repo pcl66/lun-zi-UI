@@ -1,43 +1,41 @@
 <script setup lang='ts'>
-
+import Topnav from '../components/Topnav.vue';
 </script>
 
 <template>
 <div>
-  <div class="topnav">
-    <div class="logo"></div>
-    <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
-    </ul>
-  </div>
+  <Topnav />
   <div class="banner">
     <h1>轮子UI</h1>
     <h2>一个不一般的UI框架</h2>
-    <p>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
+    <p class="actions">
+      <router-link to="/doc">开始</router-link>
+      <a href="">github</a>
+      <!-- <a href=""></a> -->
     </p>
   </div>
 </div>
 </template>
 
 <style lang="scss" scoped>
-.topnav {
-  background: pink;
+.banner {
+  padding: 100px 0;
   display: flex;
-  padding: 16px;
-  > .logo {
-    max-width: 6em;
-    margin-right: auto;
-  }
-  > .menu {
-    display: flex;
-    white-space: nowrap;
-    flex-wrap: nowrap;
-    > li {
-      margin: 0 1em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: lightgreen;
+  > .actions{
+    padding: 8px 0;
+    a {
+      margin:0 8px;
+      background: #fff;
+      display: inline-block;
+      $h: 28px;
+      height: $h;
+      line-height: $h;
+      border-radius: $h/2;
+      padding: 0 8px;
     }
   }
 }

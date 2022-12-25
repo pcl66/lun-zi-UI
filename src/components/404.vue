@@ -1,11 +1,9 @@
 <script setup lang='ts'>
-  
+
 </script>
 
 <template>
-<div>
-  123
-</div>
+<div>404</div>
 </template>
 
 <style>
