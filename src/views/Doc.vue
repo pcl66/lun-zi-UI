@@ -1,8 +1,18 @@
 <script setup lang="ts">
-import { inject } from 'vue'
+import { inject, onMounted, Ref } from 'vue'
 import Topnav from '../components/Topnav.vue'
 
-const asideVisible = inject('asideVisible')
+const asideVisible = inject<Ref<boolean>>('asideVisible')
+
+const clientWidth = document.documentElement.clientWidth
+
+onMounted(() => {
+  if(clientWidth >= 500) {
+    if(asideVisible) {
+      asideVisible.value = true
+    }
+  }
+})
 </script>
 
 <template>

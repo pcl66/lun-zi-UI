@@ -1,7 +1,14 @@
 <script setup lang="ts">
-const props = defineProps<{
-  checked: boolean
-}>()
+const props = withDefaults(
+  defineProps<{
+    checked: boolean
+    disabled?: boolean
+  }>(),
+  {
+    checked: true,
+    disabled: false
+  }
+)
 const emit = defineEmits(['update:checked'])
 const hToggle = () => {
   emit('update:checked', !props.checked)
@@ -9,21 +16,22 @@ const hToggle = () => {
 </script>
 
 <template>
-  <button @click="hToggle">
-    <span :class="{ checked: props.checked }"></span>
+  <button @click="hToggle" :disabled="disabled" :class="{ 'lz-disabled': props.disabled }">
+    <span :class="{ 'lz-checked': props.checked }"></span>
   </button>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
 button {
   height: $h;
   width: $h * 2;
   border: none;
-  background: blue;
+  background: #3875f6;
   border-radius: $h/2;
   position: relative;
+  cursor: pointer;
   > span {
     position: absolute;
     top: 2px;
@@ -40,13 +48,22 @@ button {
     }
   }
   &:active {
-    > .checked {
+    > .lz-checked {
       width: $h2 + 4px;
       margin-left: -4px;
     }
   }
-  > .checked {
+  > .lz-checked {
     left: calc(100% - #{$h2} - 2px);
+  }
+}
+.lz-disabled {
+  cursor: no-drop;
+  background: #7ea6f9;
+  &:active {
+    > span {
+      width: $h2;
+    }
   }
 }
 </style>

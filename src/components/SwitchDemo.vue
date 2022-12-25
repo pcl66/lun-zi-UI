@@ -7,6 +7,13 @@ const value = ref(false)
 <template>
 <div>
   <Switch v-model:checked = "value"/>
+  <hr>
+  <Switch v-model:checked = "value" disabled/>
+  <hr>
+  <Switch v-model:checked = "value" disabled/>
+  <hr>
+  <Switch v-model:checked = "value" disabled/>
+  <hr>
 </div>
 </template>
 
