@@ -10,11 +10,16 @@ const asideToggle = () => {
 
 <template>
   <div class="topnav">
-    <div class="logo" @click="asideToggle">logo</div>
+    <div class="logo" @click="asideToggle">
+      <router-link to="/">
+        <img src="../assets/light.svg" alt="" />
+      </router-link>
+    </div>
     <div class="menuToggle">-</div>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <router-link to="/doc/intro">
+        <li>文档</li>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -23,12 +28,20 @@ const asideToggle = () => {
 .topnav {
   position: relative;
   z-index: 10;
-  background: pink;
   display: flex;
   padding: 16px;
+  background: #b5d9ba;
+  background: -webkit-linear-gradient(top left, #b5d9ba, #7bc681);
+  background: -moz-linear-gradient(top left, #b5d9ba, #7bc681);
+  background: linear-gradient(to bottom right, #b5d9ba, #7bc681);
+  border-bottom: 1px solid rgb(27, 100, 3);
   > .logo {
     max-width: 6em;
     margin-right: auto;
+    img {
+      width: 26px;
+      height: 26px;
+    }
   }
   > .menu {
     display: flex;
@@ -36,6 +49,7 @@ const asideToggle = () => {
     flex-wrap: nowrap;
     > li {
       margin: 0 1em;
+      color: #213c2c;
     }
   }
   .menuToggle {

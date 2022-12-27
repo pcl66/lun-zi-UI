@@ -72,6 +72,18 @@ $grey: grey;
     background-color: $blue-hover;
     }
   }
+  &.lz-type-warning {
+    background-color: $red;
+    &:hover {
+    background-color: $blue-hover;
+    }
+  }
+  &.lz-type-danger {
+    background-color: $grey;
+    &:hover {
+    background-color: $blue-hover;
+    }
+  }
   &.lz-size-large {
     font-size: 24px;
     height: 48px;

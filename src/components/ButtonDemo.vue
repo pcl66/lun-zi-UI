@@ -1,16 +1,16 @@
 <script setup lang='ts'>
-import Button from '../lib/Button.vue';
+import Button1Demo from './Button1.Demo.vue';
+import Button1Code from './Button1.Demo.vue?raw';
+import Button2Demo from './Button2.Demo.vue';
+import Button2Code from './Button2.Demo.vue?raw';
+import Demo from './Demo.vue';
 
-const hClick = () => {
-  console.log('点击了')
-}
 </script>
 
 <template>
-<h1>不同尺寸</h1>
-<Button size="small" @click="hClick">small</Button>
-<Button>normal</Button>
-<Button size="large">large</Button>
+<h1>Button组件示例</h1>
+<Demo title="基本使用" :component="Button1Demo" :code="Button1Code"/>
+<Demo title="不同类型" :component="Button2Demo" :code="Button2Code"/>
 </template>
 
 <style lang="scss" scoped>

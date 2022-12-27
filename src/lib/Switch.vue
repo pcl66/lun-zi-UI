@@ -16,7 +16,7 @@ const hToggle = () => {
 </script>
 
 <template>
-  <button class="lz-switch" @click="hToggle" :disabled="disabled" :class="{ 'lz-disabled': props.disabled }">
+  <button class="lz-switch" @click="hToggle" :disabled="disabled" :class="{ 'lz-disabled': props.disabled, 'lz-checked': props.checked }">
     <span :class="{ 'lz-checked': props.checked }"></span>
   </button>
 </template>
@@ -28,10 +28,13 @@ $h2: $h - 4px;
   height: $h;
   width: $h * 2;
   border: none;
-  background: #3875f6;
+  background: #8c8c8c;
   border-radius: $h/2;
   position: relative;
   cursor: pointer;
+  &.lz-checked {
+    background: #3875f6;
+  }
   > span {
     position: absolute;
     top: 2px;
@@ -59,11 +62,14 @@ $h2: $h - 4px;
 }
 .lz-disabled {
   cursor: no-drop;
-  background: #7ea6f9;
+  background: #8c8c8c;
   &:active {
     > span {
       width: $h2;
     }
+  }
+  &.lz-checked {
+    background: #7ea6f9;
   }
 }
 </style>
