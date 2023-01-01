@@ -8,6 +8,12 @@ import DialogDemo from '../components/DialogDemo.vue'
 import Intro from '../components/Intro.vue'
 import GetStarted from '../components/GetStarted.vue'
 import Install from '../components/Install.vue'
+import BreadDemo from '../components/BreadDemo.vue'
+import SkeletonDemo from '../components/SkeletonDemo.vue'
+import CarouselDemo from '../components/CarouselDemo.vue'
+import CheckBoxDemo from '../components/CheckBoxDemo.vue'
+import MessageDemo from '../components/MessageDemo.vue'
+import TabsDemo from '../components/TabsDemo.vue'
 const history = createWebHashHistory()
 
 export const router = createRouter({
@@ -21,6 +27,12 @@ export const router = createRouter({
       { path: 'switch', component: SwitchDemo },
       { path: 'button', component: ButtonDemo },
       { path: 'dialog', component: DialogDemo },
+      { path: 'bread', component: BreadDemo },
+      { path: 'skeleton', component: SkeletonDemo },
+      { path: 'carousel', component: CarouselDemo },
+      { path: 'checkbox', component: CheckBoxDemo },
+      { path: 'message', component: MessageDemo },
+      { path: 'tabs', component: TabsDemo },
       { path: '/:pathMatch(.*)*', component: PageNotFound}
     ] },
   ]

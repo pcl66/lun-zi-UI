@@ -33,7 +33,7 @@ $h2: $h - 4px;
   position: relative;
   cursor: pointer;
   &.lz-checked {
-    background: #3875f6;
+    background: #7ec050;
   }
   > span {
     position: absolute;
@@ -69,7 +69,7 @@ $h2: $h - 4px;
     }
   }
   &.lz-checked {
-    background: #7ea6f9;
+    background: #c5d7b3;
   }
 }
 </style>

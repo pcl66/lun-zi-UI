@@ -5,7 +5,25 @@ import Switch2Demo from './Switch2.Demo.vue';
 import Switch1Code from './Switch1.Demo.vue?raw'
 import Switch2Code from './Switch2.Demo.vue?raw'
 import Demo from './Demo.vue';
+import Attr from './Attr.vue';
+import {columns} from '../config/data'
 const value2 = ref(false)
+const data = [
+  {
+    params: 'v-model:checked',
+    desc: '选中状态',
+    type: 'boolean',
+    select: 'true / false',
+    default: ' - '
+  },
+  {
+    params: 'disabled',
+    desc: '禁用',
+    type: 'boolean',
+    select: 'true / false',
+    default: 'false'
+  }
+]
 </script>
 
 <template>
@@ -14,6 +32,7 @@ const value2 = ref(false)
   <h1>Switch 组件示例 </h1>
   <Demo title="基本用法" :component="Switch1Demo" :code="Switch1Code"/>
   <Demo title="支持disabled" :component="Switch2Demo" :code="Switch2Code"/>
+  <Attr :columns="columns" :data="data"/>
 </div>
 </div>
 </template>

@@ -16,7 +16,6 @@ const props = defineProps<P>()
 const html = computed(() => {
   return Prism.highlight(props.code, Prism.languages.html, 'html')
 })
-console.log('html', html.value)
 </script>
 
 <template>
@@ -57,7 +56,7 @@ $border-color: #d9d9d9;
     border-top: 1px dashed $border-color;
     transition: all 250ms;
     overflow: hidden;
-    max-height: 800px;
+    max-height: 5000px;
     > pre {
       line-height: 1.1;
       font-family: Consolas, 'Courier New', Courier, monospace;
@@ -67,6 +66,7 @@ $border-color: #d9d9d9;
   .hidden {
     max-height: 0;
     padding: 0;
+    border: 0px;
   }
 }
 </style>

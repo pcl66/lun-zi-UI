@@ -57,7 +57,7 @@ $grey: grey;
   &:hover,
   &:focus {
     color: $color;
-    border-color: $blue-hover;
+    border-color: transparent;
     background-color: $blue-hover;
   }
   &:focus {
@@ -67,21 +67,27 @@ $grey: grey;
     border: 0;
   }
   &.lz-type-primary {
-    background-color: $blue;
+    background-color: #f2f9ec;
+    color: #7ec050;
     &:hover {
-    background-color: $blue-hover;
+    background-color: #7ec050;
+    color: #f2f9ec;
     }
   }
   &.lz-type-warning {
-    background-color: $red;
+    background-color: #fcf6ed;
+    color: #dca550;
     &:hover {
-    background-color: $blue-hover;
+    background-color: #dca550;
+    color: #f2f9ec;
     }
   }
   &.lz-type-danger {
-    background-color: $grey;
+    background-color: #fcf0f0;
+    color: #e47470;
     &:hover {
-    background-color: $blue-hover;
+    background-color: #e47470;
+    color: #f2f9ec;
     }
   }
   &.lz-size-large {

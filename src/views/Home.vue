@@ -7,7 +7,7 @@ import Topnav from '../components/Topnav.vue'
     <Topnav />
     <div class="banner">
       <h1>Light UI</h1>
-      <h2>一个很轻的UI框架</h2>
+      <h2>一枚很轻的UI框架</h2>
       <p class="actions">
         <router-link to="/doc/intro">开始</router-link>
         <router-link to="/doc/switch">组件</router-link>

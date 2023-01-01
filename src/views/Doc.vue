@@ -35,40 +35,37 @@ onMounted(() => {
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
+            <router-link to="/doc/switch">切换 Switch </router-link>
           </li>
           <li>
-            <router-link to="/doc/button">Button 组件</router-link>
+            <router-link to="/doc/button">按钮 Button</router-link>
           </li>
           <li>
-            <router-link to="/doc/dialog">Dialog 组件</router-link>
+            <router-link to="/doc/dialog">对话框 Dialog</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">Tabs 组件</router-link>
+            <router-link to="/doc/tabs">标签页 Tabs</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">骨架屏 组件</router-link>
+            <router-link to="/doc/skeleton">骨架屏 Skeleton</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">面包屑 组件</router-link>
+            <router-link to="/doc/bread">面包屑 Bread</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">单选框 组件</router-link>
+            <router-link to="/doc/carousel">轮播图 Carousel</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">复选框 组件</router-link>
+            <router-link to="/doc/checkbox">复选框 CheckBox</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">Message 组件</router-link>
+            <router-link to="/doc/message">消息提示 Message</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">城市选择 组件</router-link>
+            <router-link to="/doc/vertical-list">虚拟列表 VerticalList</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">虚拟列表 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">返回顶部 组件</router-link>
+            <router-link to="/doc/to-top">返回顶部 BackToTop</router-link>
           </li>
         </ol>
       </aside>
@@ -90,7 +87,8 @@ onMounted(() => {
   > .content {
     flex-grow: 1;
     padding-top: 5px;
-    padding-left: 200px;
+    padding-left: 220px;
+    padding-right: 20px;
     @media (max-width: 500px) {
       padding-left: 0;
     }
