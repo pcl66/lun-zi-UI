@@ -13,6 +13,14 @@ onMounted(() => {
     }
   }
 })
+const props = withDefaults(
+  defineProps<{
+    title?: string
+  }>(),
+  {
+    title: '默认标题'
+  }
+)
 </script>
 
 <template>
@@ -62,7 +70,7 @@ onMounted(() => {
             <router-link to="/doc/message">消息提示 Message</router-link>
           </li>
           <li>
-            <router-link to="/doc/vertical-list">虚拟列表 VerticalList</router-link>
+            <router-link to="/doc/vertical-list">虚拟列表 VirtualList</router-link>
           </li>
           <li>
             <router-link to="/doc/to-top">返回顶部 BackToTop</router-link>
