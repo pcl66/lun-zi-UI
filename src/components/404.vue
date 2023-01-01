@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<div>to be continued</div>
+<div>to be continued...</div>
 </template>
 
 <style>

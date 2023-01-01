@@ -45,7 +45,7 @@ const data = [
 </script>
 
 <template>
-  <h1>骨架屏示例</h1>
+  <h1>Skeleton 组件示例</h1>
   <Demo title="基本用法" :component="Skeleton1Demo" :code="Skeleton1Code" />
   <Attr :columns="columns" :data="data" />
 </template>

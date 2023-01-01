@@ -17,7 +17,7 @@ const data = [
 </script>
 
 <template>
-  <h1>复选框示例</h1>
+  <h1>CheckBox 组件示例</h1>
   <Demo title="基本用法" :component="CheckBox1Demo" :code="CheckBox1Code" />
   <Attr :columns="columns" :data="data"/>
 </template>

@@ -11,8 +11,7 @@ import Topnav from '../components/Topnav.vue'
       <p class="actions">
         <router-link to="/doc/intro">开始</router-link>
         <router-link to="/doc/switch">组件</router-link>
-        <a href="">github</a>
-        <!-- <a href=""></a> -->
+        <a target="_blank" href="https://github.com/pcl66/lun-zi-UI">github</a>
       </p>
     </div>
   </div>
