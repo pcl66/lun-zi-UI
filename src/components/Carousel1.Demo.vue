@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import Carousel from '../lib/Carousel/Carousel.vue';
-import girl1 from '../assets/girl1.jpg'
+import girl1 from '../assets/girl1.png'
 import girl2 from '../assets/girl2.jpg'
 import girl3 from '../assets/girl3.jpg'
 import girl4 from '../assets/girl4.jpg'
