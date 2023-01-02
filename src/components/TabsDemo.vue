@@ -5,8 +5,10 @@ import Tabs1Code from './Tabs1.Demo.vue?raw';
 </script>
 
 <template>
-<h1>tabs 组件示例</h1>
-<Demo title="基本用法" :component="Tabs1Demo" :code="Tabs1Code"/>
+  <div>
+    <h1>tabs 组件示例</h1>
+    <Demo title="基本用法" :component="Tabs1Demo" :code="Tabs1Code"/>
+  </div>
 </template>
 
 <style lang="scss" scoped>

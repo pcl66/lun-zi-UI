@@ -26,12 +26,14 @@ const data2 = [
 </script>
 
 <template>
-  <h1>Bread 组件示例</h1>
-  <Demo title="基本用法" :component="Bread1Demo" :code="Bread1Code" />
-  <h2>Bread</h2>
-  <Attr :columns="columns" :data="data1" />
-  <h2>BreadItem</h2>
-  <Attr :columns="columns" :data="data2" />
+  <div>
+    <h1>Bread 组件示例</h1>
+    <Demo title="基本用法" :component="Bread1Demo" :code="Bread1Code" />
+    <h2>Bread</h2>
+    <Attr :columns="columns" :data="data1" />
+    <h2>BreadItem</h2>
+    <Attr :columns="columns" :data="data2" />
+  </div>
 </template>
 
 <style></style>

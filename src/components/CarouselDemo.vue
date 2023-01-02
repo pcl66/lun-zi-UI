@@ -31,9 +31,11 @@ const data = [
 </script>
 
 <template>
-  <h1>Carousel 组件示例</h1>
-  <Demo title="基本用法" :component="Carousel1Demo" :code="Carousel1Code" />
-  <Attr :columns="columns" :data="data" />
+  <div>
+    <h1>Carousel 组件示例</h1>
+    <Demo title="基本用法" :component="Carousel1Demo" :code="Carousel1Code" />
+    <Attr :columns="columns" :data="data" />
+  </div>
 </template>
 
 <style></style>

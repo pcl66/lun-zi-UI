@@ -3,42 +3,44 @@ import Topnav from '../components/Topnav.vue'
 </script>
 
 <template>
-  <div class="color">
-    <Topnav />
-    <div class="banner">
-      <h1>Light UI</h1>
-      <h2>一个面向学习的UI框架</h2>
-      <p class="actions">
-        <router-link to="/doc/intro">开始</router-link>
-        <router-link to="/doc/switch">组件</router-link>
-        <a target="_blank" href="https://github.com/pcl66/lun-zi-UI">github</a>
-      </p>
+  <div>
+    <div class="color">
+      <Topnav />
+      <div class="banner">
+        <h1>Light UI</h1>
+        <h2>一个面向学习的UI框架</h2>
+        <p class="actions">
+          <router-link to="/doc/intro">开始</router-link>
+          <router-link to="/doc/switch">组件</router-link>
+          <a target="_blank" href="https://github.com/pcl66/lun-zi-UI">github</a>
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="features">
-    <ul>
-      <li>
-        <svg>
-          <use xlink:href="#icon-vue"></use>
-        </svg>
-        <h3>基于 Vue 3</h3>
-        <p>使用 Vue 3 Composition API</p>
-      </li>
-      <li>
-        <svg>
-          <use xlink:href="#icon-ts"></use>
-        </svg>
-        <h3>基于 TypeScript</h3>
-        <p>源代码采用 TypeScript 书写（非严格检查）</p>
-      </li>
-      <li>
-        <svg>
-          <use xlink:href="#icon-light"></use>
-        </svg>
-        <h3>代码易读</h3>
-        <p>每个组件的源代码都极其简洁</p>
-      </li>
-    </ul>
+    <div class="features">
+      <ul>
+        <li>
+          <svg>
+            <use xlink:href="#icon-vue"></use>
+          </svg>
+          <h3>基于 Vue 3</h3>
+          <p>使用 Vue 3 Composition API</p>
+        </li>
+        <li>
+          <svg>
+            <use xlink:href="#icon-ts"></use>
+          </svg>
+          <h3>基于 TypeScript</h3>
+          <p>源代码采用 TypeScript 书写（非严格检查）</p>
+        </li>
+        <li>
+          <svg>
+            <use xlink:href="#icon-light"></use>
+          </svg>
+          <h3>代码易读</h3>
+          <p>每个组件的源代码都极其简洁</p>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 

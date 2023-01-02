@@ -34,10 +34,12 @@ const data = ref([
 </script>
 
 <template>
-  <h1>Button 组件示例</h1>
-  <Demo title="基本用法" :component="Button1Demo" :code="Button1Code" />
-  <Demo title="不同类型" :component="Button2Demo" :code="Button2Code" />
-  <Attr :columns="columns" :data="data" />
+  <div>
+    <h1>Button 组件示例</h1>
+    <Demo title="基本用法" :component="Button1Demo" :code="Button1Code" />
+    <Demo title="不同类型" :component="Button2Demo" :code="Button2Code" />
+    <Attr :columns="columns" :data="data" />
+  </div>
 </template>
 
 <style lang="scss" scoped></style>

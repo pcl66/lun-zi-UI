@@ -17,9 +17,11 @@ const data = [
 </script>
 
 <template>
-  <h1>CheckBox 组件示例</h1>
-  <Demo title="基本用法" :component="CheckBox1Demo" :code="CheckBox1Code" />
-  <Attr :columns="columns" :data="data"/>
+  <div>
+    <h1>CheckBox 组件示例</h1>
+    <Demo title="基本用法" :component="CheckBox1Demo" :code="CheckBox1Code" />
+    <Attr :columns="columns" :data="data"/>
+  </div>
 </template>
 
 <style></style>

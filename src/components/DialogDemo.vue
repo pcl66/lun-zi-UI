@@ -42,10 +42,12 @@ const data = [
 </script>
 
 <template>
-  <h1>Dialog 组件示例</h1>
-  <Demo title="基本用法" :component="Dialog1Demo" :code="Dialog1Code" />
-  <Demo title="函数式调用" :component="Dialog2Demo" :code="Dialog2Code" />
-  <Attr :columns="columns" :data="data" />
+  <div>
+    <h1>Dialog 组件示例</h1>
+    <Demo title="基本用法" :component="Dialog1Demo" :code="Dialog1Code" />
+    <Demo title="函数式调用" :component="Dialog2Demo" :code="Dialog2Code" />
+    <Attr :columns="columns" :data="data" />
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
