@@ -1,17 +1,36 @@
 <script setup lang="ts">
-import { inject, onMounted, Ref } from 'vue'
+import { inject, onMounted, onUnmounted, Ref } from 'vue'
 import Topnav from '../components/Topnav.vue'
 
 const asideVisible = inject<Ref<boolean>>('asideVisible')
 
 const clientWidth = document.documentElement.clientWidth
 
+const handleResize = () => {
+  if (document.documentElement.clientWidth >= 560) {
+    if (asideVisible) {
+      asideVisible.value = true
+    }
+  }
+}
+
+const hClickOut = () => {
+  if(document.documentElement.clientWidth >= 560) return 
+  if (asideVisible) {
+    asideVisible.value = false
+  }
+}
+
 onMounted(() => {
+  window.addEventListener('resize', handleResize)
   if (clientWidth >= 500) {
     if (asideVisible) {
       asideVisible.value = true
     }
   }
+})
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
 })
 const props = withDefaults(
   defineProps<{
@@ -27,57 +46,60 @@ const props = withDefaults(
   <div class="layout">
     <Topnav class="nav" />
     <div class="content">
-      <aside v-if="asideVisible">
-        <h2>文档</h2>
-        <ol>
-          <li>
-            <router-link to="/doc/intro">介绍</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/install">安装</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/get-started">开始</router-link>
-          </li>
-        </ol>
-        <h2>组件列表</h2>
-        <ol>
-          <li>
-            <router-link to="/doc/switch">切换 Switch </router-link>
-          </li>
-          <li>
-            <router-link to="/doc/button">按钮 Button</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/dialog">对话框 Dialog</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">标签页 Tabs</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/skeleton">骨架屏 Skeleton</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/bread">面包屑 Bread</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/carousel">轮播图 Carousel</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/checkbox">复选框 CheckBox</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/message">消息提示 Message</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/vertical-list">虚拟列表 VirtualList</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/to-top">返回顶部 BackToTop</router-link>
-          </li>
-        </ol>
-      </aside>
-      <main>
+      <Transition>
+        <aside v-if="asideVisible">
+          <h2>文档</h2>
+          <ol>
+            <li>
+              <router-link to="/doc/intro">介绍</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/install">安装</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/get-started">开始</router-link>
+            </li>
+          </ol>
+          <h2>组件列表</h2>
+          <ol>
+            <li>
+              <router-link to="/doc/switch">切换 Switch </router-link>
+            </li>
+            <li>
+              <router-link to="/doc/button">按钮 Button</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/dialog">对话框 Dialog</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/tabs">标签页 Tabs</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/skeleton">骨架屏 Skeleton</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/bread">面包屑 Bread</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/carousel">轮播图 Carousel</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/checkbox">复选框 CheckBox</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/message">消息提示 Message</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/vertical-list">虚拟列表 VirtualList</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/to-top">返回顶部 BackToTop</router-link>
+            </li>
+          </ol>
+        </aside>
+      </Transition>
+
+      <main @click="hClickOut">
         <transition>
           <router-view />
         </transition>
@@ -134,6 +156,8 @@ aside {
   height: 100%;
   overflow: auto;
   border-right: 2px solid #247f1d;
+  transition: all 250ms;
+  z-index: 1;
   > h2 {
     margin-bottom: 4px;
     padding: 4px 16px;

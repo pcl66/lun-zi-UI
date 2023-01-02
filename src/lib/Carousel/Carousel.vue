@@ -82,7 +82,7 @@ onBeforeUnmount(() => {
       transition: opacity 0.5s linear;
       &.fade {
         opacity: 1;
-        z-index: 1;
+        z-index: 0;
       }
       img {
         width: 100%;
@@ -93,7 +93,7 @@ onBeforeUnmount(() => {
       position: absolute;
       left: 0;
       bottom: 20px;
-      z-index: 2;
+      z-index: 0;
       width: 100%;
       text-align: center;
       span {

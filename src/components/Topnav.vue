@@ -1,21 +1,27 @@
 <script setup lang="ts">
 import { inject, Ref } from 'vue'
+import { useRoute } from 'vue-router';
 const asideVisible = inject<Ref<boolean>>('asideVisible')
 const asideToggle = () => {
   if (asideVisible) {
     asideVisible.value = !asideVisible.value
   }
 }
+const route = useRoute()
+const active = route.path !== '/'
+
 </script>
 
 <template>
   <div class="topnav">
-    <div class="logo" @click="asideToggle">
+    <div class="logo">
       <router-link to="/">
         <img src="../assets/light.svg" alt="" />
       </router-link>
     </div>
-    <div class="menuToggle">-</div>
+    <div v-if="active" class="menuToggle" @click="asideToggle">
+      <img src="../assets/switch.svg" alt="">
+    </div>
     <ul class="menu">
       <router-link to="/doc/intro">
         <li>文档</li>
@@ -67,6 +73,10 @@ const asideToggle = () => {
       position: absolute;
       width: 30px;
       height: 30px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

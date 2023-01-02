@@ -25,7 +25,7 @@ const slides: BannerItem[] = [
 </script>
 
 <template>
-<Carousel :slides="slides" auto-play :duration="4000" style="width: 400px; height: 280px;"/>
+<Carousel :slides="slides" auto-play :duration="4000" style="width: 200px; height: 200px;"/>
 </template>
 
 <style>
