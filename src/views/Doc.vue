@@ -136,7 +136,7 @@ const props = withDefaults(
     padding-top: 5px;
     padding-left: 220px;
     padding-right: 20px;
-    @media (max-width: 500px) {
+    @media (max-width: 560px) {
       padding-left: 0;
     }
     > main {
