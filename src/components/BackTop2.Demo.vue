@@ -3,7 +3,7 @@ import BackTop from '../lib/BackTop/BackTop.vue'
 </script>
 
 <template>
-  <div class="back-up-demo">
+  <div class="back-up-demo2">
     <div>Scroll to bottom</div>
     <div>Scroll to bottom</div>
     <div>Scroll to bottom</div>
@@ -26,16 +26,15 @@ import BackTop from '../lib/BackTop/BackTop.vue'
     <div>Scroll to bottom</div>
     <div>Scroll to bottom</div>
     <div>Scroll to bottom</div>
-    <BackTop />
+    <BackTop target=".back-up-demo2">
+      ^
+    </BackTop>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.back-up-demo {
-  height: 200px;
-  overflow-y: scroll;
-  & > div {
-    /* height: 7000px; */
-  }
+.back-up-demo2 {
+  height: 150px;
+  overflow: scroll;
 }
 </style>
