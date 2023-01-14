@@ -90,10 +90,19 @@ const props = withDefaults(
               <router-link to="/doc/message">消息提示 Message</router-link>
             </li>
             <li>
+              <router-link to="/doc/v-shake">抖动框 Shake</router-link>
+            </li>
+            <li>
               <router-link to="/doc/vertical-list">虚拟列表 VirtualList</router-link>
             </li>
             <li>
-              <router-link to="/doc/to-top">返回顶部 BackToTop</router-link>
+              <router-link to="/doc/back-top">返回顶部 BackTop</router-link>
+            </li>
+          </ol>
+          <h2>自定义指令</h2>
+          <ol>
+            <li>
+              <router-link to="/doc/scroll">滚动 Scroll</router-link>
             </li>
           </ol>
         </aside>
@@ -130,12 +139,15 @@ const props = withDefaults(
   }
   > .nav {
     flex-shrink: 0;
+    position: fixed;
+    width: 100%;
   }
   > .content {
     flex-grow: 1;
     padding-top: 5px;
     padding-left: 220px;
     padding-right: 20px;
+    padding-top: 63px;
     @media (max-width: 560px) {
       padding-left: 0;
     }

@@ -14,6 +14,8 @@ import CarouselDemo from '../components/CarouselDemo.vue'
 import CheckBoxDemo from '../components/CheckBoxDemo.vue'
 import MessageDemo from '../components/MessageDemo.vue'
 import TabsDemo from '../components/TabsDemo.vue'
+import ShakeDemo from '../components/Shake/ShakeDemo.vue'
+import BackTopDemo from '../components/BackTopDemo.vue'
 const history = createWebHashHistory()
 
 export const router = createRouter({
@@ -33,6 +35,8 @@ export const router = createRouter({
       { path: 'checkbox', component: CheckBoxDemo },
       { path: 'message', component: MessageDemo },
       { path: 'tabs', component: TabsDemo },
+      { path: 'v-shake', component: ShakeDemo },
+      { path: 'back-top', component: BackTopDemo },
       { path: '/:pathMatch(.*)*', component: PageNotFound}
     ] },
   ]
