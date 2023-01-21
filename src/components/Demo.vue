@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import Button from '../lib/Button.vue';
 import 'prismjs'
 import 'prismjs/themes/prism.css'
@@ -14,7 +14,17 @@ const showCode = () => (codeVisible.value = true)
 const hideCode = () => (codeVisible.value = false)
 const props = defineProps<P>()
 const html = computed(() => {
-  return Prism.highlight(props.code, Prism.languages.html, 'html')
+  const _html = Prism.highlight(props.code, Prism.languages.html, 'html')
+  // console.log('_html', html)
+  return _html
+})
+const preRef = ref<HTMLPreElement | null>(null)
+const codeRef = ref<HTMLPreElement | null>(null)
+const _height = ref<number>(0)
+
+onMounted(() => {
+  _height.value = preRef.value!.getBoundingClientRect().height
+  codeRef.value!.style.maxHeight = _height.value + 'px'
 })
 </script>
 
@@ -28,8 +38,8 @@ const html = computed(() => {
       <Button @click="hideCode" v-if="codeVisible">隐藏代码</Button>
       <Button @click="showCode" v-else>查看代码</Button>
     </div>
-    <div class="demo-code" :class="{hidden: !codeVisible}">
-      <pre class="language-html" v-html="html" />
+    <div ref="codeRef" class="demo-code" :class="{hidden: !codeVisible}">
+      <pre ref="preRef" class="language-html" v-html="html" />
     </div>
   </div>
 </template>
@@ -52,11 +62,11 @@ $border-color: #d9d9d9;
     border-top: 1px dashed $border-color;
   }
   &-code {
-    padding: 16px;
+    /* padding: 16px; */
     border-top: 1px dashed $border-color;
-    transition: all 250ms;
+    transition: all 750ms;
     overflow: hidden;
-    max-height: 5000px;
+    /* max-height: ; */
     > pre {
       line-height: 1.1;
       font-family: Consolas, 'Courier New', Courier, monospace;
@@ -64,7 +74,7 @@ $border-color: #d9d9d9;
     }
   }
   .hidden {
-    max-height: 0;
+    max-height: 0 !important;
     padding: 0;
     border: 0px;
   }

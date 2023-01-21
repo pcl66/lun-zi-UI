@@ -37,9 +37,9 @@ const active = route.path !== '/'
   display: flex;
   padding: 16px;
   background: #b5d9ba;
-  background: -webkit-linear-gradient(top left, #b5d9ba, #7bc681);
-  background: -moz-linear-gradient(top left, #b5d9ba, #7bc681);
-  background: linear-gradient(to bottom right, #b5d9ba, #7bc681);
+  background: -webkit-linear-gradient(top left, #b5d9ba, #a1e2a7);
+  /* background: -moz-linear-gradient(top left, #b5d9ba, #7bc681);
+  background: linear-gradient(to bottom right, #b5d9ba, #7bc681); */
   border-bottom: 1px solid rgb(27, 100, 3);
   > .logo {
     max-width: 6em;

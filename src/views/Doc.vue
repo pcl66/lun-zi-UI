@@ -99,12 +99,6 @@ const props = withDefaults(
               <router-link to="/doc/back-top">返回顶部 BackTop</router-link>
             </li>
           </ol>
-          <h2>自定义指令</h2>
-          <ol>
-            <li>
-              <router-link to="/doc/scroll">滚动 Scroll</router-link>
-            </li>
-          </ol>
         </aside>
       </Transition>
 
@@ -180,33 +174,47 @@ aside {
         padding: 10px 16px;
         display: block;
         text-decoration: none;
-        transition: all 250ms;
+        transition: all 500ms;
         background: #fff;
+        border-radius: 6px;
         &:hover {
-          background: #b5d9ba;
-          background: -webkit-linear-gradient(top left, #b5d9ba, #7bc681);
+          background: #c4c4c49c;
+          /* color: #247f1d; */
+          /* background: -webkit-linear-gradient(top left, #b5d9ba, #7bc681);
           background: -moz-linear-gradient(top left, #b5d9ba, #7bc681);
-          background: linear-gradient(to bottom right, #b5d9ba, #7bc681);
+          background: linear-gradient(to bottom right, #b5d9ba, #7bc681); */
           border-right: 2px solid #247f1d;
         }
       }
       .router-link-active {
-        background: #b5d9ba;
+        color: #366e3a;
+        background-color: #75b8794e;
+        /* font-weight: 800; */
+        /* background: #b5d9ba;
         background: -webkit-linear-gradient(top left, #b5d9ba, #7bc681);
         background: -moz-linear-gradient(top left, #b5d9ba, #7bc681);
-        background: linear-gradient(to bottom right, #b5d9ba, #7bc681);
+        background: linear-gradient(to bottom right, #b5d9ba, #7bc681); */
         border-right: 2px solid #247f1d;
         /* transition: all 250ms; */
       }
     }
   }
   &::-webkit-scrollbar {
-    width: 6px;
+    display: none;
+    /* opacity: 0;
+    visibility: hidden; */
+    width: 5px;
+    transition: all .5s;
     /* height: 6px; */
   }
   &:hover::-webkit-scrollbar {
-    width: 6px;
+    /* visibility: visible;
+    opacity: 1; */
+    display: none;
   }
+  /* &:hover::-webkit-scrollbar {
+    width: 6px;
+  } */
   /*滚动条的轨道*/
   &::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
