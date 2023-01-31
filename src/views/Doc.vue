@@ -93,10 +93,13 @@ const props = withDefaults(
               <router-link to="/doc/v-shake">抖动框 Shake</router-link>
             </li>
             <li>
-              <router-link to="/doc/vertical-list">虚拟列表 VirtualList</router-link>
+              <router-link to="/doc/virtual-list">虚拟列表 VirtualList</router-link>
             </li>
             <li>
               <router-link to="/doc/back-top">返回顶部 BackTop</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/upload">文件上传 Upload</router-link>
             </li>
           </ol>
         </aside>

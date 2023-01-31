@@ -66,9 +66,9 @@ onMounted(() => {
   transform: translateY(-75px);
 }
 .down-enter-active {
-  transition: all 0.2s ease-out;
+  transition: all 2s ease-out;
 }
-.down-leave-from {
+/* .down-leave-from {
   opacity: 1;
 }
 .down-leave-to {
@@ -77,7 +77,7 @@ onMounted(() => {
 }
 .down-leave-active {
   transition: all 0.5s;
-}
+} */
 .xtx-message {
   width: 300px;
   height: 50px;

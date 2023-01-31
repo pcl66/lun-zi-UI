@@ -15,7 +15,6 @@ const hideCode = () => (codeVisible.value = false)
 const props = defineProps<P>()
 const html = computed(() => {
   const _html = Prism.highlight(props.code, Prism.languages.html, 'html')
-  // console.log('_html', html)
   return _html
 })
 const preRef = ref<HTMLPreElement | null>(null)
@@ -23,8 +22,8 @@ const codeRef = ref<HTMLPreElement | null>(null)
 const _height = ref<number>(0)
 
 onMounted(() => {
-  _height.value = preRef.value!.getBoundingClientRect().height
-  codeRef.value!.style.maxHeight = _height.value + 'px'
+  _height.value = preRef.value!.clientHeight
+  codeRef.value!.style.height = _height.value + 'px'
 })
 </script>
 
@@ -64,7 +63,7 @@ $border-color: #d9d9d9;
   &-code {
     /* padding: 16px; */
     border-top: 1px dashed $border-color;
-    transition: all 750ms;
+    transition: all 500ms;
     overflow: hidden;
     /* max-height: ; */
     > pre {
@@ -74,7 +73,7 @@ $border-color: #d9d9d9;
     }
   }
   .hidden {
-    max-height: 0 !important;
+    height: 0 !important;
     padding: 0;
     border: 0px;
   }

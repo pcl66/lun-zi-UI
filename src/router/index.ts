@@ -16,6 +16,8 @@ import MessageDemo from '../components/MessageDemo.vue'
 import TabsDemo from '../components/TabsDemo.vue'
 import ShakeDemo from '../components/Shake/ShakeDemo.vue'
 import BackTopDemo from '../components/BackTopDemo.vue'
+import UploadDemo from '../components/UploadDemo.vue'
+import VirtualListDemo from '../components/VirtualListDemo.vue'
 const history = createWebHashHistory()
 
 export const router = createRouter({
@@ -37,6 +39,8 @@ export const router = createRouter({
       { path: 'tabs', component: TabsDemo },
       { path: 'v-shake', component: ShakeDemo },
       { path: 'back-top', component: BackTopDemo },
+      { path: 'upload', component: UploadDemo },
+      { path: 'virtual-list', component:  VirtualListDemo},
       { path: '/:pathMatch(.*)*', component: PageNotFound}
     ] },
   ]
