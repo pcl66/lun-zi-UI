@@ -7,12 +7,33 @@ import { columns } from '../config/data'
 
 const data1 = [
   {
-    params: 'separator',
-    desc: '分割符',
-    type: 'string',
+    params: 'height',
+    desc: '容器高度(px)',
+    type: 'number',
     select: ' - ',
-    default: ' / '
-  }
+    default: ' 400 '
+  },
+  {
+    params: 'width',
+    desc: '容器宽度(px)',
+    type: 'number',
+    select: ' - ',
+    default: ' 200 '
+  },
+  {
+    params: 'itemHeight',
+    desc: '每一项的高度(px)',
+    type: 'number',
+    select: ' - ',
+    default: ' 20 '
+  },
+  {
+    params: 'itemCount',
+    desc: '显示的个数',
+    type: 'number',
+    select: ' - ',
+    default: ' 20 '
+  },
 ]
 const data2 = [
   {
@@ -27,12 +48,9 @@ const data2 = [
 
 <template>
   <div>
-    <h1>Bread 组件示例</h1>
+    <h1>VirtualList 组件示例</h1>
     <Demo title="基本用法" :component="VirtualList1Demo" :code="VirtualList1Code" />
-    <!-- <h2>Bread</h2>
     <Attr :columns="columns" :data="data1" />
-    <h2>BreadItem</h2>
-    <Attr :columns="columns" :data="data2" /> -->
   </div>
 </template>
 

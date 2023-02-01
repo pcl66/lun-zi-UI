@@ -4,26 +4,28 @@ import { onMounted, ref } from 'vue';
 const props = withDefaults(defineProps<{
   width: number
   height: number
+  itemHeight: number
+  itemCount: number
 }>(), {
-  height: 600,
-  width: 200
+  height: 400,
+  width: 200,
+  itemHeight: 20,
+  itemCount: 20
 })
 const height = props.height + 'px'
 const width = props.width + 'px'
 const data = Array.from({length: 100}).map((v,i) => i)
-const realHeight = 30 * data.length + 'px'
+const realHeight = props.itemHeight * data.length + 'px'
+const itemHeight = props.itemHeight + 'px'
 const start = ref(0)
-const showData = ref(data.slice(start.value, 20))
+const showData = ref(data.slice(start.value, props.itemCount))
 const virtualListRef = ref<HTMLDivElement | null>(null)
 const realRef = ref<HTMLDivElement | null>(null)
 const hScroll = (e: Event) => {
-  console.log((e.target as any).scrollTop)
   const scrollTop = (e.target as any).scrollTop
-  // if(scrollTop > 30 * data.length - 30 * 20 ) return
-  start.value = Math.floor(scrollTop / 30)
-  console.log('start', start.value)
-  showData.value = data.slice(start.value, start.value + 20)
-  realRef.value!.style.transform = `translateY(${start.value * 30}px)`
+  start.value = Math.floor(scrollTop / props.itemHeight)
+  showData.value = data.slice(start.value, start.value + props.itemCount)
+  realRef.value!.style.transform = `translateY(${start.value * props.itemHeight}px)`
 }
 onMounted(() => {
   console.log(virtualListRef.value)
@@ -45,15 +47,25 @@ onMounted(() => {
 .virtualList{
   height: v-bind(height);
   width: v-bind(width);
-  border: 1px solid red;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 0 5px;
   overflow: scroll;
   position: relative;
   .real {
     position: absolute;
     height: v-bind(realHeight);
+    width: 100%;
     .item {
-      height: 30px;
-      line-height: 30px;
+      height: v-bind(itemHeight);
+      line-height: v-bind(itemHeight);
+      width: calc(100% - 10px);
+      cursor: pointer;
+      transition: all .5s;
+      border-radius: 3px;
+      &:hover {
+        background-color: gray;
+      }
     }
   }
 }

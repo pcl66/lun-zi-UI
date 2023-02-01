@@ -66,7 +66,7 @@ onMounted(() => {
   transform: translateY(-75px);
 }
 .down-enter-active {
-  transition: all 2s ease-out;
+  transition: all .75s ease-out;
 }
 /* .down-leave-from {
   opacity: 1;
