@@ -60,14 +60,26 @@ const props = withDefaults(
               <router-link to="/doc/get-started">开始</router-link>
             </li>
           </ol>
-          <h2>组件列表</h2>
+          <h3>基础组件</h3>
+          <ol>
+            <li>
+              <router-link to="/doc/button">按钮 Button</router-link>
+            </li>
+          </ol>
+          <h3>表单组件</h3>
           <ol>
             <li>
               <router-link to="/doc/switch">切换 Switch </router-link>
             </li>
             <li>
-              <router-link to="/doc/button">按钮 Button</router-link>
+              <router-link to="/doc/checkbox">复选框 CheckBox</router-link>
             </li>
+            <li>
+              <router-link to="/doc/upload">文件上传 Upload</router-link>
+            </li>
+          </ol>
+          <h3>数据展示</h3>
+          <ol>
             <li>
               <router-link to="/doc/dialog">对话框 Dialog</router-link>
             </li>
@@ -84,9 +96,6 @@ const props = withDefaults(
               <router-link to="/doc/carousel">轮播图 Carousel</router-link>
             </li>
             <li>
-              <router-link to="/doc/checkbox">复选框 CheckBox</router-link>
-            </li>
-            <li>
               <router-link to="/doc/message">消息提示 Message</router-link>
             </li>
             <li>
@@ -97,9 +106,6 @@ const props = withDefaults(
             </li>
             <li>
               <router-link to="/doc/back-top">返回顶部 BackTop</router-link>
-            </li>
-            <li>
-              <router-link to="/doc/upload">文件上传 Upload</router-link>
             </li>
           </ol>
         </aside>
@@ -167,9 +173,10 @@ aside {
   border-right: 2px solid #247f1d;
   transition: all 250ms;
   z-index: 1;
-  > h2 {
+  > h2,h3 {
     margin-bottom: 4px;
     padding: 4px 16px;
+    border-top: 1px solid black;
   }
   > ol {
     > li {
