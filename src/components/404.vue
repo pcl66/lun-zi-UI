@@ -1,11 +1,32 @@
-<script setup lang='ts'>
-
-</script>
-
 <template>
-<div>to be continued...</div>
+  <div>
+    <h1>404</h1>
+  </div>
 </template>
 
-<style>
+<script>
+export default {
+  name: 'LunZiUI404',
+
+  data() {
+    return {
+      name1: '222'
+    };
+  },
+
+  created() {
+    console.log(Reflect.ownKeys(this));
+  },
+  mounted() {
+    
+  },
+
+  methods: {
+    
+  },
+};
+</script>
+
+<style lang="scss" scoped>
 
 </style>

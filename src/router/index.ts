@@ -18,6 +18,8 @@ import ShakeDemo from '../components/Shake/ShakeDemo.vue'
 import BackTopDemo from '../components/BackTopDemo.vue'
 import UploadDemo from '../components/UploadDemo.vue'
 import VirtualListDemo from '../components/VirtualListDemo.vue'
+import CollapseDemo from '../components/CollapseDemo.vue'
+import CodeDiffDemo from '../components/CodeDiffDemo.vue'
 const history = createWebHashHistory()
 
 export const router = createRouter({
@@ -41,7 +43,9 @@ export const router = createRouter({
       { path: 'back-top', component: BackTopDemo },
       { path: 'upload', component: UploadDemo },
       { path: 'virtual-list', component:  VirtualListDemo},
-      { path: '/:pathMatch(.*)*', component: PageNotFound}
+      { path: 'collapse', component:  CollapseDemo},
+      {path: 'code-diff', component: CodeDiffDemo},
+      { path: '/:pathMatch(.*)*', component: PageNotFound},
     ] },
   ]
 })

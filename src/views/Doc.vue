@@ -107,6 +107,12 @@ const props = withDefaults(
             <li>
               <router-link to="/doc/back-top">返回顶部 BackTop</router-link>
             </li>
+            <li>
+              <router-link to="/doc/collapse">折叠面板 Collapse</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/code-diff">form对比 diff</router-link>
+            </li>
           </ol>
         </aside>
       </Transition>
